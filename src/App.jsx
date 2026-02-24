@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Services from './pages/Services'
-
+import PageReveal from './components/PageReviel'
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div>
-
+        <PageReveal/> 
         <Navbar />
         <Home/>
         <Services/>

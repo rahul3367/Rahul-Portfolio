@@ -9,8 +9,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
         
         {/* Logo */}
-        <div className="text-lg tracking-wide font-medium">
-          Rahul
+        <div className="text-lg tracking-wide font-medium text-black/70">
+          Web Developer & Designer
         </div>
 
         {/* Desktop Menu */}
