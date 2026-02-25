@@ -1,6 +1,6 @@
 import React from 'react'
 import image1 from "../assets/SelfImage.jpeg"
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 
 export default function Home() {
     return (
@@ -37,6 +37,7 @@ export default function Home() {
 
 
                 {/* Bottom Layout */}
+
                 <div className="grid md:grid-cols-3 gap-16 items-start">
 
                     {/* Left Content */}
@@ -46,14 +47,31 @@ export default function Home() {
                             ↓
                         </div>
 
-                        <p className="text-lg text-black/70 leading-relaxed max-w-sm ">
+                        <motion.p
+                            initial={{ y: 60, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{
+                                duration: 2,
+                                ease: [0.76, 0, 0.24, 1],
+                            }}
+                            className="text-lg text-black/70 leading-relaxed max-w-sm"
+                        >
                             I build fast, modern websites that help businesses grow,
                             available for freelance projects worldwide.
-                        </p>
+                        </motion.p>
 
-                        <button className="bg-[#3c3732] text-white px-8 py-4 rounded-full text-sm tracking-wide hover:bg-black transition">
+                        <motion.button
+                            initial={{ y: 60, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{
+                                duration: 2,
+                                delay: 0.25, // 👈 interval between paragraph & button
+                                ease: [0.76, 0, 0.24, 1],
+                            }}
+                            className="bg-[#3c3732] text-white px-8 py-4 rounded-full text-sm tracking-wide hover:bg-black transition"
+                        >
                             CONTACT ↗
-                        </button>
+                        </motion.button>
 
                     </div>
 
@@ -69,8 +87,7 @@ export default function Home() {
                                 duration: 2.0,
                                 ease: [0.76, 0, 0.24, 1],
                             }}
-                            // className="flex justify-center rounded-xl w-70 object-cover grayscale "
-                            // className='rounded-xl'
+
                             className="overflow-hidden rounded-xl"
 
                         />
@@ -79,17 +96,20 @@ export default function Home() {
 
 
                     {/* Right Availability */}
-                    <div className="flex flex-col items-end justify-end h-full text-right">
-
-                        <p className="text-sm tracking-[0.25em] uppercase text-black/60 mb-2">
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 2.0, ease: [0.76, 0, 0.24, 1] }}
+                        className="absolute bottom-8 right-8 md:bottom-12 md:right-16 text-right"
+                    >
+                        <p className="text-sm tracking-[0.25em] uppercase text-black/60 mb-3">
                             Available for work
                         </p>
 
                         <h2 className="text-7xl md:text-8xl font-semibold tracking-tight text-black/80">
                             FEB'26
                         </h2>
-
-                    </div>
+                    </motion.div>
 
                 </div>
 

@@ -4,6 +4,9 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import PageReveal from './components/PageReviel'
+import Works from './pages/works'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 
 function App() {
@@ -16,6 +19,10 @@ function App() {
         <Navbar />
         <Home/>
         <Services/>
+        <Works/>
+        <About/>
+        <Contact/>
+        
       </div>
     </>
   )

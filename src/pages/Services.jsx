@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
 
 function Services() {
   const services = [
@@ -29,7 +30,6 @@ function Services() {
     >
       <div className="max-w-7xl mx-auto">
 
-        {/* Section Heading */}
         <div className="mb-20">
           <h2 className="text-5xl md:text-7xl font-semibold tracking-tight">
             WHAT I DO /
@@ -39,19 +39,20 @@ function Services() {
           </p>
         </div>
 
-        {/* Services List */}
         <div className="space-y-16">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
               className="border-t border-white/10 pt-12 grid md:grid-cols-3 gap-10"
             >
-              {/* Number */}
               <div className="text-4xl text-white/40 font-light">
                 ({service.number})
               </div>
 
-              {/* Title */}
               <div className="md:col-span-2">
                 <h3 className="text-3xl md:text-4xl font-medium mb-6">
                   {service.title}
@@ -61,7 +62,7 @@ function Services() {
                   {service.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -70,4 +71,4 @@ function Services() {
   );
 }
 
-export default Services
+export default Services;
