@@ -2,6 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function Contact() {
+  const containerVariant = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariant = {
+    hidden: { opacity: 0, y: 60 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <section
       id="contact"
@@ -10,45 +28,57 @@ function Contact() {
       <div className="max-w-6xl mx-auto">
 
         {/* Section Heading */}
-        <div className="mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-24"
+        >
           <h2 className="text-5xl md:text-7xl font-semibold tracking-tight">
             LET’S CONNECT /
           </h2>
           <p className="text-sm text-black/50 mt-6 tracking-widest uppercase">
             (Contact)
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-20">
 
           {/* Left Side */}
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
             className="space-y-8"
           >
-            <p className="text-xl leading-relaxed text-black/80">
+            <motion.p
+              variants={itemVariant}
+              className="text-xl leading-relaxed text-black/80"
+            >
               I’m always open to discussing new projects, internship
               opportunities, or collaborations.
-            </p>
+            </motion.p>
 
-            <div className="space-y-4 text-black/60">
+            <motion.div
+              variants={itemVariant}
+              className="space-y-4 text-black/60"
+            >
               <p>Email: rahul@example.com</p>
               <p>Location: India</p>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Right Side Form */}
           <motion.form
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
             className="space-y-8"
           >
-            <div>
+            <motion.div variants={itemVariant}>
               <label className="block mb-2 text-sm text-black/60">
                 Name
               </label>
@@ -56,9 +86,9 @@ function Contact() {
                 type="text"
                 className="w-full border-b border-black/20 py-3 outline-none focus:border-black transition"
               />
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div variants={itemVariant}>
               <label className="block mb-2 text-sm text-black/60">
                 Email
               </label>
@@ -66,9 +96,9 @@ function Contact() {
                 type="email"
                 className="w-full border-b border-black/20 py-3 outline-none focus:border-black transition"
               />
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div variants={itemVariant}>
               <label className="block mb-2 text-sm text-black/60">
                 Message
               </label>
@@ -76,14 +106,15 @@ function Contact() {
                 rows="4"
                 className="w-full border-b border-black/20 py-3 outline-none focus:border-black transition resize-none"
               ></textarea>
-            </div>
+            </motion.div>
 
-            <button
+            <motion.button
+              variants={itemVariant}
               type="submit"
               className="mt-6 px-8 py-4 bg-black text-white rounded-full hover:bg-black/80 transition"
             >
               Send Message
-            </button>
+            </motion.button>
           </motion.form>
 
         </div>
