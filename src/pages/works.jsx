@@ -29,7 +29,15 @@ function Works() {
   return (
     <section
       id="works"
-      className="min-h-screen bg-white text-black px-6 py-28"
+      className="min-h-screen text-white px-6 py-28"
+      style={{
+        background: `
+          radial-gradient(ellipse 100% 70% at 50% 100%, rgba(55, 55, 60, 0.35) 0%, transparent 55%),
+          radial-gradient(ellipse 80% 50% at 60% 90%, rgba(70, 70, 75, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 50% 50%, rgba(28, 28, 33, 0.3) 0%, transparent 70%),
+          #111113
+        `
+      }}
     >
       <div className="max-w-7xl mx-auto">
 
@@ -38,7 +46,7 @@ function Works() {
           <h2 className="text-5xl md:text-7xl font-semibold tracking-tight">
             SELECTED WORKS /
           </h2>
-          <p className="text-sm text-black/50 mt-6 tracking-widest uppercase">
+          <p className="text-sm text-white/40 mt-6 tracking-widest uppercase">
             (Projects)
           </p>
         </div>
@@ -52,11 +60,11 @@ function Works() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
-              className="grid md:grid-cols-2 gap-16 items-center border-t border-black/10 pt-16"
+              className="grid md:grid-cols-2 gap-16 items-center border-t border-white/10 pt-16"
             >
               {/* Left Content */}
               <div className="space-y-6">
-                <div className="text-sm text-black/40 tracking-widest">
+                <div className="text-sm text-white/40 tracking-widest">
                   ({project.number})
                 </div>
 
@@ -64,17 +72,17 @@ function Works() {
                   {project.title}
                 </h3>
 
-                <p className="text-black/60 text-lg leading-relaxed max-w-lg">
+                <p className="text-white/60 text-lg leading-relaxed max-w-lg">
                   {project.description}
                 </p>
 
-                <div className="text-sm text-black/50 uppercase tracking-wide">
+                <div className="text-sm text-white/50 uppercase tracking-wide">
                   {project.category}
                 </div>
               </div>
 
               {/* Right Placeholder Image */}
-              <div className="w-full h-[350px] bg-black/5 rounded-2xl"></div>
+              <div className="w-full h-[350px] bg-white/5 rounded-2xl"></div>
             </motion.div>
           ))}
         </div>

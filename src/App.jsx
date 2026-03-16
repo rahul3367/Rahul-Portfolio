@@ -14,15 +14,15 @@ function App() {
 
   return (
     <>
-      <div>
-        <PageReveal/> 
+      <div className='overflow-x-hidden'>
+        <PageReveal />
         <Navbar />
-        <Home/>
-        <Services/>
-        <Works/>
-        <About/>
-        <Contact/>
-        
+        <Home />
+        <About />
+        <Works />
+        <Services />
+        <Contact />
+
       </div>
     </>
   )

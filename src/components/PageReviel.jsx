@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function PageReveal() {
   return (
-    <div className="fixed top-0 left-0 w-full h-full z-[9999]">
+    <div className="fixed top-0 left-0 w-full h-full z-[9999] pointer-events-none">
       <svg
         className="w-full h-full"
         viewBox="0 0 1440 900"
