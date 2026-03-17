@@ -43,22 +43,51 @@ export default function Home() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 2.0, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
             >
-                <h1 className="text-[13vw] leading-[0.9] font-semibold tracking-tight overflow-hidden flex justify-center p-8">
+                <h1 className="text-4xl md:text-[13vw] leading-[0.9] font-semibold tracking-tight overflow-hidden flex justify-center p-8 pt-8">
                     RAHUL SINGH
                 </h1>
+            </motion.div>
+
+            {/* Mobile Contact Button - Center */}
+            <motion.div
+                className="relative z-10 md:hidden flex justify-center items-center h-[30vh]"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1.0, delay: 0.8, ease: [0.76, 0, 0.24, 1] }}
+            >
+                <motion.a
+                    href="#contact"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        const section = document.getElementById('contact');
+                        if (section) {
+                            section.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }}
+                    initial={{ y: 60, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                        duration: 2,
+                        delay: 0.25,
+                        ease: [0.76, 0, 0.24, 1],
+                    }}
+                    className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full text-sm tracking-wide hover:bg-white/20 transition cursor-pointer"
+                >
+                    CONTACT ↗
+                </motion.a>
             </motion.div>
 
             {/* Bottom Layout */}
 
             <motion.div 
-                className="absolute bottom-0 left-0 right-0 w-full px-6 pb-16 z-10 flex justify-between items-end"
+                className="relative z-10 md:absolute md:bottom-0 md:left-0 md:right-0 w-full px-6 pb-16 flex flex-col md:flex-row justify-between items-start md:items-end"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.0, delay: 0.8, ease: [0.76, 0, 0.24, 1] }}
             >
 
                 {/* Left Content */}
-                <div className="space-y-8 pl-16">
+                <div className="space-y-8 pl-16 hidden md:block">
 
 
                     <motion.p
@@ -101,15 +130,31 @@ export default function Home() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2.0, ease: [0.76, 0, 0.24, 1] }}
-                    className="text-right pr-16 pb-10"
+                    className="text-center pb-10 pl-15 border-l-2 md:border-l-0 md:pl-0 md:text-right md:pr-[60px] md:pr-16 md:ml-auto border-white/40"
                 >
-                    <p className="text-sm tracking-[0.25em] uppercase text-white/60 mb-3">
+                    <p className="text-sm tracking-[0.25em] uppercase text-white/60 mb-3 ">
                         Available for work
                     </p>
 
-                    <h2 className="text-7xl md:text-8xl font-semibold tracking-tight text-white/80">
+                    <h2 className="text-2xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-white/80">
                         {currentDate}
                     </h2>
+                </motion.div>
+
+                {/* Mobile Description Text */}
+                <motion.div
+                    className="md:hidden w-full text-center mt-12"
+                    initial={{ y: 60, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                        duration: 2,
+                        delay: 0.5,
+                        ease: [0.76, 0, 0.24, 1],
+                    }}
+                >
+                    <p className="text-sm text-white/70 leading-relaxed">
+                        I build fast, modern websites that help businesses grow, available for freelance projects worldwide.
+                    </p>
                 </motion.div>
 
             </motion.div>
