@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className='overflow-x-hidden'>
+      <div>
         <PageReveal />
         <Navbar />
         <Home />
