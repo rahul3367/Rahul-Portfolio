@@ -16,7 +16,7 @@ function Works() {
         `,
       }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="mb-24 mt-0 p-0">
           <h2 className="text-5xl md:text-7xl font-semibold tracking-tight text-center">
             Projects
@@ -24,7 +24,7 @@ function Works() {
           <p className="text-center mt-2 max-w-full text-gray-500 text-lg ">A collection of my work in modern web development and clean UI/UX design.</p>
         </div>
 
-        <div className="flex flex-wrap gap-6 items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:p-8 ">
           {projects.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}

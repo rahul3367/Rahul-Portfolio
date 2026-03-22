@@ -55,14 +55,9 @@ export default function Home() {
                 transition={{ duration: 1.0, delay: 0.8, ease: [0.76, 0, 0.24, 1] }}
             >
                 <motion.a
-                    href="#contact"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        const section = document.getElementById('contact');
-                        if (section) {
-                            section.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }}
+                    href="https://drive.google.com/file/d/1GvVVmMgIJwEEtf4UJpvj9c91ySiNeSWH/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ y: 60, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{
@@ -72,7 +67,7 @@ export default function Home() {
                     }}
                     className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full text-sm tracking-wide hover:bg-white/20 transition cursor-pointer"
                 >
-                    CONTACT ↗
+                    RESUME ↗
                 </motion.a>
             </motion.div>
 
@@ -103,14 +98,9 @@ export default function Home() {
                     </motion.p>
 
                     <motion.a
-                        href="#contact"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            const section = document.getElementById('contact');
-                            if (section) {
-                                section.scrollIntoView({ behavior: 'smooth' });
-                            }
-                        }}
+                        href="https://drive.google.com/file/d/1GvVVmMgIJwEEtf4UJpvj9c91ySiNeSWH/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         initial={{ y: 60, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{
@@ -120,7 +110,7 @@ export default function Home() {
                         }}
                         className="inline-block bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full text-sm tracking-wide hover:bg-white/20 transition cursor-pointer"
                     >
-                        CONTACT ↗
+                        RESUME ↗
                     </motion.a>
 
                 </div>

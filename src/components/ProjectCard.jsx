@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const ProjectCard = ({
   title,
   description,
@@ -10,11 +12,17 @@ const ProjectCard = ({
   bgColor = "#1a1a2e",
 }) => {
   return (
-    <div className="flex flex-col w-72 rounded-xl border border-white/10 bg-white/5 overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-100px" }}
+      className="flex flex-col w-full md:w-full rounded-xl border border-white/5 bg-white/5 overflow-hidden items-center justify-center md:border-b-gray-700 md:border-2"
+    >
 
       {/* Thumbnail */}
       <div
-        className="relative w-full h-36 flex items-center justify-center overflow-hidden"
+        className="relative w-full h-40 md:h-56 flex items-center justify-center overflow-hidden"
         style={{ background: bgColor }}
       >
         {image ? (
@@ -51,7 +59,7 @@ const ProjectCard = ({
       </div>
 
       {/* Body */}
-      <div className="flex flex-col gap-2 p-4 flex-1">
+      <div className="flex flex-col gap-2 py-3 px-4 md:p-4 md:gap-2 flex-1 text-xl">
         <h3 className="text-sm font-semibold text-white">{title}</h3>
         <p className="text-xs text-white/50 leading-relaxed">{description}</p>
         <div className="flex flex-wrap gap-1.5 mt-1">
@@ -67,7 +75,7 @@ const ProjectCard = ({
       </div>
 
       {/* Footer */}
-      <div className="flex gap-2 px-4 py-3 border-t border-white/10">
+      <div className="flex gap-2 px-4 py-2 md:py-3 border-t border-white/10">
         {githubUrl && (<a
           
             href={githubUrl}
@@ -92,7 +100,7 @@ const ProjectCard = ({
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

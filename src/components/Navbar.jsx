@@ -6,7 +6,7 @@ const NAV_ITEMS = [
   { label: "Home", id: "home" },
   { label: "About", id: "about" },
   { label: "Project", id: "works" },
-  { label: "Contact", id: "contact" },
+  { label: "Contact", id: "footer" },
 ];
 
 export default function Navbar() {
