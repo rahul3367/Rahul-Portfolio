@@ -36,7 +36,6 @@ export default function Home() {
 
 
             {/* BIG NAME  123 */}
-            {/* BIG NAME  123 */}
             <motion.div 
                 className="w-full overflow-hidden"
                 initial={{ y: 100, opacity: 0 }}

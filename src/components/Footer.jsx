@@ -7,5 +7,3 @@ function Footer() {
 }
 
 export default Footer
-
-rfce

@@ -2,7 +2,6 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import Services from './pages/Services'
 import PageReveal from './components/PageReviel'
 import Works from './pages/works'
 import About from './pages/About'
@@ -20,7 +19,6 @@ function App() {
         <Home />
         <About />
         <Works />
-        <Services />
         <Contact />
 
       </div>
