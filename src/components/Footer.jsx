@@ -15,7 +15,7 @@ function Footer() {
 
             {/* COLUMN 1: SAY HELLO */}
             <div className="flex-1">
-              <h3 className="text-lg font-bold mb-5 uppercase tracking-wide">Say Hello</h3>
+              <h3 className="text-lg font-bold mb-5 uppercase tracking-wide">Hello</h3>
               <p className="text-[15px] font-medium leading-relaxed mb-6">
                 Open for exciting projects and collaborations.<br className="hidden lg:block" /> Let's connect or just drop a hi!
               </p>
@@ -68,7 +68,7 @@ function Footer() {
         {/* Copyright Section */}
         <div className="border-t border-gray-600 text-center py-6 px-6 md:py-8 md:px-12">
           <p className="text-gray-400 text-sm md:text-base font-medium">
-            © 2024 All rights reserved by <span className="text-white font-semibold">Rahul Singh</span>
+            © 2026 All rights reserved by <span className="text-white font-semibold">Rahul Singh</span>
           </p>
         </div>
       </div>

@@ -30,7 +30,7 @@ function About() {
         >
 
           <h2 className="relative text-4xl md:text-5xl font-bold mb-6 text-white inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full md:text-center md:justify-center ">
-            This I's An
+            Hello
           </h2>
           <div className="">
             <BioSection />
